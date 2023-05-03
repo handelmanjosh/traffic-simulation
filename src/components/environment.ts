@@ -22,6 +22,8 @@ export class Environment {
         return [[randomBetween(road.start[0], road.end[0]), randomBetween(road.start[1], road.end[1])], dir]
     }
     draw = () => {
+        this.context.fillStyle = "white";
+        this.context.fillRect(0, 0, this.canvas.width, this.canvas.height);
         this.Roads.forEach(road => road.draw(this.context));
     }
 }
